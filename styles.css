@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@200&display=swap');
+
 #page-container{
     display:flex;
     flex-direction: column;
@@ -5,34 +7,76 @@
     height:100vh;
     justify-content: center;
     align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgba(226, 124, 96, 0.87);
     
 }
-#bookshelf{
+
+h1{
+    font-size: 40px;
+    padding:30px;
+    color:white;
+}
+
+#wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     height:70%;
+    position: relative;
+}
+
+#bookshelf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
     flex-wrap: wrap;
     border:solid;
-    overflow: scroll;
+    overflow: auto;
+    background-color: rgba(234, 195, 53, 0.767);
+    border-color: white;
+    border-radius: 5px;
+    box-shadow: inset 7px 10px 68px 0px rgba(0,0,0,0.33);
+}
+
+#new-book-button{
+    color: white;
+    position:absolute;
+    top: 10px;
+    right:20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+#new-book-button:hover{
+    color: grey;
 }
 .book{
     position: relative;
-    background-color: red;
-    border:solid 2px black;
+    background-color: blue;
+    border:solid 2px grey;
     display:flex;
     flex-direction: column;
     text-align: center;
     width:150px;
+    min-width:150px;
     height: 200px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding:10px;
     margin:20px;
+    color:white;
+    box-shadow: 14px 10px 13px -1px rgba(0,0,0,0.28);
+}
+
+.book:hover{
+    border-color:white;
 }
 
 .book h2{
-    font-size: 20px;;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
 }
 .book h2, p{
     padding:6px;
@@ -47,13 +91,36 @@
 }
 
 
-#new-book-button{
-    width:150px;
-    margin: 30px;
+.remove-button{
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+    color: grey;
+    font-size: 20px;
+    cursor: pointer;
+}
+.remove-button:hover{
+    color: white;
+}
+
+.read-tick{
+    position: absolute;
+    bottom: 8px;
+    right:35px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.status{
+    position: absolute;
+    bottom: 6px;
+    left:3px;
+    font-size: 12px;
 }
 
 /* The Modal (background) */
 .modal {
+    font-family: 'Source Sans Pro', sans-serif;
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -68,23 +135,40 @@
   
   /* Modal Content/Box */
   .modal-content {
+    display:flex;
+    flex-direction: column;
+    position: relative;
     background-color: #fefefe;
-    margin: 30vh auto; /* 15% from the top and centered */
+    margin: 35vh auto; /* 15% from the top and centered */
     padding: 40px;
     border: 1px solid #888;
     border-radius: 10px;
-    width: 200px; /* Could be more or less, depending on screen size */
+    width: 150px; /* Could be more or less, depending on screen size */
+    background-color: antiquewhite;
   }
 
-  #new-book-form{
+  #book-form{
       display: flex;
       flex-direction: column;
+  }
+  .form-item{
+      margin:2px;
+  }
+
+  #submit{
+      margin: auto;
+      font-family: 'Source Sans Pro', sans-serif;
+      width:50%;
+      margin-top:10px;
+      
   }
   
   /* The Close Button */
   .close {
+    position: absolute;
+    right: 10px;
+    top:10px;
     color: #aaa;
-    float: right;
     font-size: 20px;
     font-weight: bold;
   }

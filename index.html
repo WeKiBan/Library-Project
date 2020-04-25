@@ -5,38 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Project</title>
+    <script src="https://kit.fontawesome.com/366e86972c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div id="page-container">
-        <div id="bookshelf">
-
+        <h1>Library</h1>
+        <div id="wrapper">
+            <div id="bookshelf">
+                <i class="fas fa-plus" id="new-book-button"></i>
+            </div>
         </div>
-
-        <button id="new-book-button">Add New Book</button>
     </div>
-        <div id="myModal" class="modal">
+    <div id="myModal" class="modal">
 
 
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <form id="new-book-form" action="">
-                    <label for="title-input">Title:</label>
-                    <input type="text" id="title-input" name="title-input">
-                    <label for="author-input">Author:</label>
-                    <input type="text" id="author-input" name="author-input">
-                    <label for="pages-input">Pages:</label>
-                    <input type="number" id="pages-input" name="pages-input">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="book-form" action="">
+                <label class="form-item" for="title-input">Title:</label>
+                <input class="form-item" type="text" id="title-input" name="title-input">
+                <label class="form-item" for="author-input">Author:</label>
+                <input class="form-item" type="text" id="author-input" name="author-input">
+                <label class="form-item" for="pages-input">Pages:</label>
+                <input class="form-item" type="number" id="pages-input" name="pages-input">
+                <div class="form-item" >
                     <label for="pages-input">Mark as read:</label>
                     <input type="checkbox" id="status">
-                    <input type="submit" id="submit">
-                </form>
-            </div>
+                </div>
+            </form>
+            <button id="submit">Submit New Book</button>
 
         </div>
-    
+
+    </div>
 
     <script type="text/javascript" src="script.js"></script>
 </body>
