@@ -3,15 +3,20 @@ let myLibrary = [];
 let colors = ['#03CEA4', '#345995', '#FB4D3D', '#CA1551']
 let submit = document.getElementById('submit');
 let form = document.getElementById('book-form')
-function Book(title, author, pages, status){
- this.title = title;
- this.author = author;
- this.pages = pages;
- this.status = status;
+
+
+class Book{
+  constructor(title, author, pages, status){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+  }
+ info() {
+  return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status}`
+ }
 }
 
-
-Book.prototype.info = function(){return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status}`}
 
 function addBookToLibrary(title, author, pages, status){
     var newBook = new Book(title, author, pages, status)
